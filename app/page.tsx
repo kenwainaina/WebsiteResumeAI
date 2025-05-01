@@ -21,7 +21,7 @@ export default function Home() {
       {/* Hero Section */}
       <div className="grid lg:grid-cols-2 gap-8 items-center mb-16">
         <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }}>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">Kenyatta (Ken) Wainaina</h1>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">Ken Wainaina</h1>
           <h2 className="text-xl md:text-2xl text-gray-300 mb-6">
             B.S. in Interactive Design at JMU | Incoming Georgetown AI Management Graduate Student
           </h2>

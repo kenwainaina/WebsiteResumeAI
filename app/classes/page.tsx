@@ -6,9 +6,10 @@ import { ArrowLeftIcon } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import { Badge } from "@/components/ui/badge"
 
 type Course = {
-  code: string
+  code?: string
   name: string
   description: string
 }
@@ -18,7 +19,66 @@ type CourseCategory = {
   courses: Course[]
 }
 
-const courseCategories: CourseCategory[] = [
+const mastersCourseCategories: CourseCategory[] = [
+  {
+    name: "Core Courses",
+    courses: [
+      {
+        name: "Ethical AI: Moral Dilemmas & Biases",
+        description:
+          "Exploration of ethical considerations in AI development and deployment, including bias detection and mitigation strategies.",
+      },
+      {
+        name: "Introduction to Artificial Intelligence",
+        description:
+          "Foundational concepts of artificial intelligence, machine learning, and their applications in various industries.",
+      },
+      {
+        name: "Innovation Management & AI Strategy",
+        description: "Strategic frameworks for implementing AI solutions and managing innovation within organizations.",
+      },
+      {
+        name: "AI Governance & Compliance",
+        description:
+          "Regulatory frameworks, compliance requirements, and governance structures for responsible AI implementation.",
+      },
+      {
+        name: "Communication Strategies for Digital Transformation",
+        description:
+          "Effective communication techniques for leading AI initiatives and digital transformation projects.",
+      },
+      {
+        name: "Capstone",
+        description: "Culminating project applying AI management principles to solve real-world business challenges.",
+      },
+    ],
+  },
+  {
+    name: "Focus Area: AI Strategy & Leadership",
+    courses: [
+      {
+        name: "AI Leadership & Market Analysis",
+        description:
+          "Techniques for analyzing market opportunities and leading AI-driven initiatives within organizations.",
+      },
+      {
+        name: "AI & Data-Driven Decision Making",
+        description:
+          "Frameworks for leveraging AI and data analytics to enhance organizational decision-making processes.",
+      },
+      {
+        name: "Creative & Generative AI",
+        description: "Applications of generative AI in creative industries and business innovation contexts.",
+      },
+      {
+        name: "AI Security & Data Privacy",
+        description: "Security considerations, privacy frameworks, and risk management strategies for AI systems.",
+      },
+    ],
+  },
+]
+
+const bachelorCourseCategories: CourseCategory[] = [
   {
     name: "General Education Courses",
     courses: [
@@ -287,34 +347,95 @@ export default function Classes() {
           My Classes
         </motion.h1>
 
-        <div className="space-y-8">
-          {courseCategories.map((category, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <Card className="bg-white/5 border-white/20">
-                <CardHeader>
-                  <CardTitle className="text-2xl font-semibold text-white">{category.name}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <Accordion type="single" collapsible className="w-full">
-                    {category.courses.map((course, courseIndex) => (
-                      <AccordionItem key={courseIndex} value={`item-${index}-${courseIndex}`}>
-                        <AccordionTrigger className="text-white hover:text-white/80">
-                          <span className="font-semibold">{course.code}</span> - {course.name}
-                        </AccordionTrigger>
-                        <AccordionContent className="text-gray-300">{course.description}</AccordionContent>
-                      </AccordionItem>
-                    ))}
-                  </Accordion>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </div>
+        {/* Master's Degree Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="mb-12"
+        >
+          <div className="flex items-center mb-6">
+            <h2 className="text-3xl font-bold text-white">Master's Courses</h2>
+            <Badge className="ml-3 bg-blue-600 text-white">Georgetown University</Badge>
+            <Badge className="ml-2 bg-gray-600 text-white">Starting Fall 2025</Badge>
+          </div>
+
+          <div className="space-y-8">
+            {mastersCourseCategories.map((category, index) => (
+              <motion.div
+                key={`master-${index}`}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="bg-white/5 border-white/20 border-l-4 border-l-blue-500">
+                  <CardHeader>
+                    <CardTitle className="text-2xl font-semibold text-white">{category.name}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <Accordion type="single" collapsible className="w-full">
+                      {category.courses.map((course, courseIndex) => (
+                        <AccordionItem
+                          key={`master-${index}-${courseIndex}`}
+                          value={`master-item-${index}-${courseIndex}`}
+                        >
+                          <AccordionTrigger className="text-white hover:text-white/80 font-medium">
+                            {course.name}
+                          </AccordionTrigger>
+                          <AccordionContent className="text-gray-300">{course.description}</AccordionContent>
+                        </AccordionItem>
+                      ))}
+                    </Accordion>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Bachelor's Degree Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
+          <div className="flex items-center mb-6">
+            <h2 className="text-3xl font-bold text-white">Bachelor's Courses</h2>
+            <Badge className="ml-3 bg-purple-600 text-white">James Madison University</Badge>
+          </div>
+
+          <div className="space-y-8">
+            {bachelorCourseCategories.map((category, index) => (
+              <motion.div
+                key={`bachelor-${index}`}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 + 0.4 }}
+              >
+                <Card className="bg-white/5 border-white/20">
+                  <CardHeader>
+                    <CardTitle className="text-2xl font-semibold text-white">{category.name}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <Accordion type="single" collapsible className="w-full">
+                      {category.courses.map((course, courseIndex) => (
+                        <AccordionItem
+                          key={`bachelor-${index}-${courseIndex}`}
+                          value={`bachelor-item-${index}-${courseIndex}`}
+                        >
+                          <AccordionTrigger className="text-white hover:text-white/80">
+                            <span className="font-semibold">{course.code}</span> - {course.name}
+                          </AccordionTrigger>
+                          <AccordionContent className="text-gray-300">{course.description}</AccordionContent>
+                        </AccordionItem>
+                      ))}
+                    </Accordion>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </div>
   )
