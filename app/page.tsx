@@ -13,7 +13,6 @@ import {
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import Image from "next/image"
 
 export default function Home() {
   return (
@@ -45,7 +44,7 @@ export default function Home() {
           transition={{ duration: 0.5 }}
           className="relative"
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-2xl opacity-20" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#041E42] to-[#63666A] rounded-full blur-2xl opacity-20" />
           <img
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Professional-Pic-pZtU7TQwbyTkboUCWxKctJbYPpysNn.jpeg"
             alt="Profile"
@@ -61,7 +60,7 @@ export default function Home() {
         transition={{ duration: 0.5, delay: 0.2 }}
         className="mb-16"
       >
-        <Card className="bg-white/5 border-white/10">
+        <Card className="card-georgetown">
           <CardContent className="p-6">
             <p className="text-gray-300 leading-relaxed">
               A highly motivated AI Strategy professional and Interactive Design major with a minor in Computer
@@ -88,7 +87,7 @@ export default function Home() {
           <GraduationCapIcon className="mr-2" /> Education
         </h2>
         <div className="space-y-4">
-          <Card className="bg-white/5 border-white/10">
+          <Card className="card-georgetown card-georgetown-highlight">
             <CardContent className="p-6">
               <h3 className="text-xl font-semibold text-white">Georgetown University, Washington, DC</h3>
               <p className="text-gray-300">Master of Professional Studies in Artificial Intelligence Management</p>
@@ -96,7 +95,7 @@ export default function Home() {
             </CardContent>
           </Card>
 
-          <Card className="bg-white/5 border-white/10">
+          <Card className="card-georgetown">
             <CardContent className="p-6">
               <h3 className="text-xl font-semibold text-white">James Madison University, Harrisonburg, VA</h3>
               <p className="text-gray-300">Degree – Computer Information Systems / UI/UX Design</p>
@@ -117,10 +116,10 @@ export default function Home() {
           <BriefcaseIcon className="mr-2" /> Work Experience
         </h2>
         <div className="grid md:grid-cols-2 gap-8">
-          <Card className="bg-white/5 border-white/10 hover:bg-white/10 transition-colors">
+          <Card className="card-georgetown hover:bg-white/10 transition-colors">
             <CardContent className="p-6">
               <div className="flex items-center gap-4 mb-4">
-                <ShoppingCartIcon className="h-8 w-8 text-purple-400" />
+                <ShoppingCartIcon className="h-8 w-8 text-[#63666A]" />
                 <div>
                   <h3 className="text-xl font-semibold text-white">Administrative and Communications Intern</h3>
                   <p className="text-gray-400">Harrisonburg Rockingham Chamber of Commerce</p>
@@ -138,10 +137,10 @@ export default function Home() {
             </CardContent>
           </Card>
 
-          <Card className="bg-white/5 border-white/10 hover:bg-white/10 transition-colors">
+          <Card className="card-georgetown hover:bg-white/10 transition-colors">
             <CardContent className="p-6">
               <div className="flex items-center gap-4 mb-4">
-                <RocketIcon className="h-8 w-8 text-purple-400" />
+                <RocketIcon className="h-8 w-8 text-[#63666A]" />
                 <div>
                   <h3 className="text-xl font-semibold text-white">Robot Engineer</h3>
                   <p className="text-gray-400">Starship Technologies</p>
@@ -162,17 +161,11 @@ export default function Home() {
             </CardContent>
           </Card>
 
-          <Card className="bg-white/5 border-white/10 hover:bg-white/10 transition-colors">
+          <Card className="card-georgetown hover:bg-white/10 transition-colors">
             <CardContent className="p-6">
               <div className="flex items-center gap-4 mb-4">
-                <div className="h-8 w-8 relative flex-shrink-0">
-                  <Image
-                    src="/images/meta-logo.png"
-                    alt="Meta Logo"
-                    width={32}
-                    height={32}
-                    className="object-contain"
-                  />
+                <div className="h-8 w-8 flex items-center justify-center bg-blue-600 text-white rounded">
+                  <span className="font-bold text-sm">M</span>
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-white">AI Strategy Intern</h3>
@@ -206,10 +199,10 @@ export default function Home() {
             </CardContent>
           </Card>
 
-          <Card className="bg-white/5 border-white/10 hover:bg-white/10 transition-colors">
+          <Card className="card-georgetown hover:bg-white/10 transition-colors">
             <CardContent className="p-6">
               <div className="flex items-center gap-4 mb-4">
-                <ShoppingCartIcon className="h-8 w-8 text-purple-400" />
+                <ShoppingCartIcon className="h-8 w-8 text-[#63666A]" />
                 <div>
                   <h3 className="text-xl font-semibold text-white">Admissions Manager</h3>
                   <p className="text-gray-400">Water Mine Family Swimming Hole</p>
@@ -236,7 +229,7 @@ export default function Home() {
         <h2 className="text-3xl font-bold text-white mb-8 flex items-center">
           <GraduationCapIcon className="mr-2" /> Leadership and Activities
         </h2>
-        <Card className="bg-white/5 border-white/10">
+        <Card className="card-georgetown">
           <CardContent className="p-6">
             <h3 className="text-xl font-semibold text-white">Head Coach (Volunteer)</h3>
             <p className="text-gray-300">Little Legends Basketball, Vienna, VA</p>
@@ -246,7 +239,7 @@ export default function Home() {
             </ul>
           </CardContent>
         </Card>
-        <Card className="bg-white/5 border-white/10 mt-4">
+        <Card className="card-georgetown mt-4">
           <CardContent className="p-6">
             <h3 className="text-xl font-semibold text-white">Audio Visual Specialist</h3>
             <p className="text-gray-300">McLean Bible Church</p>
@@ -270,7 +263,7 @@ export default function Home() {
           <BadgeCheckIcon className="mr-2" /> Skills
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <Card className="bg-white/5 border-white/10">
+          <Card className="card-georgetown">
             <CardHeader>
               <CardTitle className="text-xl font-semibold text-white">Programming & Development</CardTitle>
             </CardHeader>
@@ -289,7 +282,7 @@ export default function Home() {
               </ul>
             </CardContent>
           </Card>
-          <Card className="bg-white/5 border-white/10">
+          <Card className="card-georgetown">
             <CardHeader>
               <CardTitle className="text-xl font-semibold text-white">Design & User Experience</CardTitle>
             </CardHeader>
@@ -307,7 +300,7 @@ export default function Home() {
               </ul>
             </CardContent>
           </Card>
-          <Card className="bg-white/5 border-white/10">
+          <Card className="card-georgetown">
             <CardHeader>
               <CardTitle className="text-xl font-semibold text-white">Data & Analytics</CardTitle>
             </CardHeader>
@@ -323,7 +316,7 @@ export default function Home() {
               </ul>
             </CardContent>
           </Card>
-          <Card className="bg-white/5 border-white/10">
+          <Card className="card-georgetown card-georgetown-highlight">
             <CardHeader>
               <CardTitle className="text-xl font-semibold text-white">Artificial Intelligence</CardTitle>
             </CardHeader>
@@ -342,7 +335,7 @@ export default function Home() {
               </ul>
             </CardContent>
           </Card>
-          <Card className="bg-white/5 border-white/10">
+          <Card className="card-georgetown">
             <CardHeader>
               <CardTitle className="text-xl font-semibold text-white">Business & Management</CardTitle>
             </CardHeader>
@@ -358,7 +351,7 @@ export default function Home() {
               </ul>
             </CardContent>
           </Card>
-          <Card className="bg-white/5 border-white/10">
+          <Card className="card-georgetown">
             <CardHeader>
               <CardTitle className="text-xl font-semibold text-white">Software & Tools</CardTitle>
             </CardHeader>
@@ -373,7 +366,7 @@ export default function Home() {
               </ul>
             </CardContent>
           </Card>
-          <Card className="bg-white/5 border-white/10">
+          <Card className="card-georgetown">
             <CardHeader>
               <CardTitle className="text-xl font-semibold text-white">Soft Skills</CardTitle>
             </CardHeader>
@@ -402,7 +395,7 @@ export default function Home() {
         <h2 className="text-3xl font-bold text-white mb-8 flex items-center">
           <HeartIcon className="mr-2" /> Interests
         </h2>
-        <Card className="bg-white/5 border-white/10">
+        <Card className="card-georgetown">
           <CardContent className="p-6">
             <p className="text-gray-300">
               Technology including AI, UI/UX Design, Robotics, Team Sports (Basketball, Football, Lacrosse), Golf

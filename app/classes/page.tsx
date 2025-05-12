@@ -330,7 +330,7 @@ const bachelorCourseCategories: CourseCategory[] = [
 
 export default function Classes() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-950 via-red-950 to-purple-950">
+    <div className="min-h-screen">
       <div className="max-w-6xl mx-auto px-4 py-12">
         <Link href="/" passHref>
           <Button variant="outline" className="mb-8">
@@ -354,10 +354,12 @@ export default function Classes() {
           transition={{ duration: 0.5 }}
           className="mb-12"
         >
-          <div className="flex items-center mb-6">
-            <h2 className="text-3xl font-bold text-white">Master's Courses</h2>
-            <Badge className="ml-3 bg-blue-600 text-white">Georgetown University</Badge>
-            <Badge className="ml-2 bg-gray-600 text-white">Starting Fall 2025</Badge>
+          <div className="flex flex-wrap items-center mb-6">
+            <h2 className="text-3xl font-bold text-white mr-3">Master's Courses</h2>
+            <div className="flex flex-wrap gap-2 mt-2 sm:mt-0">
+              <Badge className="bg-[#041E42] text-white">Georgetown University</Badge>
+              <Badge className="bg-[#63666A] text-white">Starting Fall 2025</Badge>
+            </div>
           </div>
 
           <div className="space-y-8">
@@ -368,7 +370,7 @@ export default function Classes() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="bg-white/5 border-white/20 border-l-4 border-l-blue-500">
+                <Card className="bg-white/5 border-white/10 backdrop-blur-sm border-l-4 border-l-[#041E42]">
                   <CardHeader>
                     <CardTitle className="text-2xl font-semibold text-white">{category.name}</CardTitle>
                   </CardHeader>
@@ -399,9 +401,9 @@ export default function Classes() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <div className="flex items-center mb-6">
-            <h2 className="text-3xl font-bold text-white">Bachelor's Courses</h2>
-            <Badge className="ml-3 bg-purple-600 text-white">James Madison University</Badge>
+          <div className="flex flex-wrap items-center mb-6">
+            <h2 className="text-3xl font-bold text-white mr-3">Bachelor's Courses</h2>
+            <Badge className="bg-purple-600 text-white mt-2 sm:mt-0">James Madison University</Badge>
           </div>
 
           <div className="space-y-8">
@@ -412,7 +414,7 @@ export default function Classes() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 + 0.4 }}
               >
-                <Card className="bg-white/5 border-white/20">
+                <Card className="bg-white/5 border-white/10 backdrop-blur-sm">
                   <CardHeader>
                     <CardTitle className="text-2xl font-semibold text-white">{category.name}</CardTitle>
                   </CardHeader>
@@ -424,7 +426,8 @@ export default function Classes() {
                           value={`bachelor-item-${index}-${courseIndex}`}
                         >
                           <AccordionTrigger className="text-white hover:text-white/80">
-                            <span className="font-semibold">{course.code}</span> - {course.name}
+                            {course.code && <span className="font-semibold">{course.code} - </span>}
+                            {course.name}
                           </AccordionTrigger>
                           <AccordionContent className="text-gray-300">{course.description}</AccordionContent>
                         </AccordionItem>

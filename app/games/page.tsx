@@ -40,74 +40,72 @@ export default function GamesAndProjects() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-950 via-red-950 to-purple-950">
-      <div className="max-w-4xl mx-auto px-4 py-12">
-        <Link href="/" passHref>
-          <Button variant="outline" className="mb-8">
-            <ArrowLeftIcon className="mr-2 h-4 w-4" /> Back to Home
-          </Button>
-        </Link>
+    <div className="max-w-4xl mx-auto px-4 py-12">
+      <Link href="/" passHref>
+        <Button variant="outline" className="mb-8">
+          <ArrowLeftIcon className="mr-2 h-4 w-4" /> Back to Home
+        </Button>
+      </Link>
 
-        <motion.h1
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-4xl font-bold text-white mb-8"
-        >
-          Games & Coding Projects
-        </motion.h1>
+      <motion.h1
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="text-4xl font-bold text-white mb-8"
+      >
+        Games & Coding Projects
+      </motion.h1>
 
-        <div className="space-y-6">
-          {projects.map((project, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <Card className="bg-white/5 border-white/10 overflow-hidden">
-                <CardHeader
-                  className="cursor-pointer"
-                  onClick={() => setExpandedProject(expandedProject === index ? null : index)}
-                >
-                  <CardTitle className="text-xl font-semibold text-white flex justify-between items-center">
-                    {project.title}
-                    {expandedProject === index ? (
-                      <ChevronUpIcon className="h-6 w-6" />
-                    ) : (
-                      <ChevronDownIcon className="h-6 w-6" />
-                    )}
-                  </CardTitle>
-                </CardHeader>
-                <AnimatePresence>
-                  {expandedProject === index && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <CardContent>
-                        <p className="text-gray-300 mb-4">{project.description}</p>
-                        <div className="flex flex-wrap gap-2 mb-4">
-                          {project.technologies.map((tech, techIndex) => (
-                            <span
-                              key={techIndex}
-                              className="bg-purple-500/20 text-purple-200 text-xs font-medium px-2.5 py-0.5 rounded"
-                            >
-                              {tech}
-                            </span>
-                          ))}
-                        </div>
-                        {project.component && <div className="mt-4 bg-white/5 p-4 rounded-lg">{project.component}</div>}
-                      </CardContent>
-                    </motion.div>
+      <div className="space-y-6">
+        {projects.map((project, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+          >
+            <Card className="card-georgetown overflow-hidden">
+              <CardHeader
+                className="cursor-pointer"
+                onClick={() => setExpandedProject(expandedProject === index ? null : index)}
+              >
+                <CardTitle className="text-xl font-semibold text-white flex justify-between items-center">
+                  {project.title}
+                  {expandedProject === index ? (
+                    <ChevronUpIcon className="h-6 w-6" />
+                  ) : (
+                    <ChevronDownIcon className="h-6 w-6" />
                   )}
-                </AnimatePresence>
-              </Card>
-            </motion.div>
-          ))}
-        </div>
+                </CardTitle>
+              </CardHeader>
+              <AnimatePresence>
+                {expandedProject === index && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <CardContent>
+                      <p className="text-gray-300 mb-4">{project.description}</p>
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {project.technologies.map((tech, techIndex) => (
+                          <span
+                            key={techIndex}
+                            className="bg-[#041E42]/30 text-gray-200 text-xs font-medium px-2.5 py-0.5 rounded"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                      {project.component && <div className="mt-4 bg-white/5 p-4 rounded-lg">{project.component}</div>}
+                    </CardContent>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </Card>
+          </motion.div>
+        ))}
       </div>
     </div>
   )

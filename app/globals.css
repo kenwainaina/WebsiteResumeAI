@@ -74,3 +74,33 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Georgetown University Theme */
+.bg-georgetown {
+  background: linear-gradient(135deg, #041e42 0%, #212b36 50%, #63666a 100%);
+  background-size: cover;
+  position: relative;
+}
+
+.bg-georgetown::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(99, 102, 106, 0.05) 0%, transparent 80%);
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+/* Card styling for Georgetown theme */
+.card-georgetown {
+  @apply bg-white/5 border-white/10 backdrop-blur-sm;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-georgetown-highlight {
+  @apply border-l-4 border-l-[#041E42];
+  background: linear-gradient(to right, rgba(4, 30, 66, 0.2), rgba(4, 30, 66, 0.05));
+}
