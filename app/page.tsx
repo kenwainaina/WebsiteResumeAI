@@ -31,12 +31,12 @@ export default function Home() {
               </a>
             </Button>
             <Button variant="outline" size="icon" asChild>
-              <a href="mailto:wainaikg@dukes.jmu.edu">
+              <a href="mailto:kenwainaina123@gmail.com">
                 <MailIcon className="h-5 w-5" />
               </a>
             </Button>
           </div>
-          <p className="text-gray-300">Great Falls, VA 22066 | 571-484-4791 | wainaikg@dukes.jmu.edu</p>
+          <p className="text-gray-300">Great Falls, VA 22066 | kenwainaina123@gmail.com </p>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
