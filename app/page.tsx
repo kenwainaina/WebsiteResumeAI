@@ -22,7 +22,7 @@ export default function Home() {
         <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }}>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">Ken Wainaina</h1>
           <h2 className="text-xl md:text-2xl text-gray-300 mb-6">
-            B.S. in Interactive Design at JMU | Incoming Georgetown AI Management Graduate Student
+            Interactive Design Graduate | Georgetown AI Management Master's Student
           </h2>
           <div className="flex gap-4 mb-6">
             <Button variant="outline" size="icon" asChild>
@@ -60,17 +60,16 @@ export default function Home() {
         transition={{ duration: 0.5, delay: 0.2 }}
         className="mb-16"
       >
-        <Card className="card-georgetown">
+        <Card className="bg-white/5 border-white/10 backdrop-blur-sm">
           <CardContent className="p-6">
             <p className="text-gray-300 leading-relaxed">
-              A highly motivated AI Strategy professional and Interactive Design major with a minor in Computer
-              Information Systems. With experience at Meta developing AI-driven business strategies and a strong
-              background in data analytics and software development. Proficient in SQL, Python, Java, CSS, and HTML.
-              Recently admitted to Georgetown University's Master of Professional Studies in Artificial Intelligence
-              Management program (Fall 2025). Experienced in building and maintaining personal websites, utilizing
-              Microsoft tools, and database systems. I also have knowledge of cybersecurity and privacy controls and
-              regulations (e.g., NIST, FISMA, FISCAM). Adept at project management and team collaboration, with a strong
-              focus on delivering efficient AI-powered solutions.
+              Highly motivated Interactive Design graduate and current Master's student in Artificial Intelligence
+              Management at Georgetown University, combining creative design with expertise in data analytics,
+              generative AI, and software development. Proficient in SQL, Python, Java, CSS, and HTML, with experience
+              in website development, Microsoft tools, and database administration. Expanding knowledge in AI strategy,
+              ethical implementation, and emerging technologies through graduate studies. Skilled in cybersecurity
+              frameworks (NIST, FISMA, FISCAM), project management, and cross-functional collaboration, delivering
+              efficient, technology-driven solutions with a product management mindset.
             </p>
           </CardContent>
         </Card>
@@ -87,19 +86,19 @@ export default function Home() {
           <GraduationCapIcon className="mr-2" /> Education
         </h2>
         <div className="space-y-4">
-          <Card className="card-georgetown card-georgetown-highlight">
+          <Card className="bg-white/5 border-white/10 backdrop-blur-sm border-l-4 border-l-[#041E42]">
             <CardContent className="p-6">
               <h3 className="text-xl font-semibold text-white">Georgetown University, Washington, DC</h3>
               <p className="text-gray-300">Master of Professional Studies in Artificial Intelligence Management</p>
-              <p className="text-gray-400">Starting Fall 2025</p>
+              <p className="text-gray-400">Started Summer 2025</p>
             </CardContent>
           </Card>
 
-          <Card className="card-georgetown">
+          <Card className="bg-white/5 border-white/10 backdrop-blur-sm">
             <CardContent className="p-6">
               <h3 className="text-xl font-semibold text-white">James Madison University, Harrisonburg, VA</h3>
-              <p className="text-gray-300">Degree – Computer Information Systems / UI/UX Design</p>
-              <p className="text-gray-400">Graduation: May 2025</p>
+              <p className="text-gray-300">Bachelor of Science – Interactive Design / Computer Information Systems</p>
+              <p className="text-gray-400">Graduated: May 2025</p>
             </CardContent>
           </Card>
         </div>
@@ -116,7 +115,58 @@ export default function Home() {
           <BriefcaseIcon className="mr-2" /> Work Experience
         </h2>
         <div className="grid md:grid-cols-2 gap-8">
-          <Card className="card-georgetown hover:bg-white/10 transition-colors">
+          <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors">
+            <CardContent className="p-6">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="h-8 w-8 flex items-center justify-center bg-gray-800 text-white rounded">
+                  <span className="font-bold text-sm"></span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-white">Specialist</h3>
+                  <p className="text-gray-400">Apple Inc., Tysons Corner, VA</p>
+                  <p className="text-sm text-gray-500">July 2025 - Present</p>
+                </div>
+              </div>
+              <ul className="space-y-2 text-gray-300 ml-4">
+                <li>
+                  • Drove sales growth by delivering personalized product recommendations aligned to customer needs
+                </li>
+                <li>
+                  • Facilitated seamless device setup and troubleshooting, improving customer confidence and retention
+                </li>
+                <li>
+                  • Cultivated brand loyalty by providing exceptional, solutions-focused service in a high-volume retail
+                  setting
+                </li>
+              </ul>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors">
+            <CardContent className="p-6">
+              <div className="flex items-center gap-4 mb-4">
+                <RocketIcon className="h-8 w-8 text-[#63666A]" />
+                <div>
+                  <h3 className="text-xl font-semibold text-white">Robot Engineer</h3>
+                  <p className="text-gray-400">Starship Technologies</p>
+                  <p className="text-sm text-gray-500">February 2021 - June 2025</p>
+                </div>
+              </div>
+              <ul className="space-y-2 text-gray-300 ml-4">
+                <li>
+                  • Managed and maintained 60 on-campus delivery robots, resolving technical issues and ensuring smooth
+                  operation
+                </li>
+                <li>
+                  • Led and trained a team of 20 student employees, mentoring them on coding, testing, and
+                  implementation
+                </li>
+                <li>• Awarded US Employee of the Year in 2021, 2022, 2023 for outstanding performance</li>
+              </ul>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors">
             <CardContent className="p-6">
               <div className="flex items-center gap-4 mb-4">
                 <ShoppingCartIcon className="h-8 w-8 text-[#63666A]" />
@@ -137,31 +187,7 @@ export default function Home() {
             </CardContent>
           </Card>
 
-          <Card className="card-georgetown hover:bg-white/10 transition-colors">
-            <CardContent className="p-6">
-              <div className="flex items-center gap-4 mb-4">
-                <RocketIcon className="h-8 w-8 text-[#63666A]" />
-                <div>
-                  <h3 className="text-xl font-semibold text-white">Robot Engineer</h3>
-                  <p className="text-gray-400">Starship Technologies</p>
-                  <p className="text-sm text-gray-500">February 2021 - Present</p>
-                </div>
-              </div>
-              <ul className="space-y-2 text-gray-300 ml-4">
-                <li>
-                  • Managed and maintained 60 on-campus delivery robots, resolving technical issues and ensuring smooth
-                  operation
-                </li>
-                <li>
-                  • Led and trained a team of 20 student employees, mentoring them on coding, testing, and
-                  implementation
-                </li>
-                <li>• Awarded US Employee of the Year in 2021, 2022, 2023 for outstanding performance</li>
-              </ul>
-            </CardContent>
-          </Card>
-
-          <Card className="card-georgetown hover:bg-white/10 transition-colors">
+          <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors">
             <CardContent className="p-6">
               <div className="flex items-center gap-4 mb-4">
                 <div className="h-8 w-8 flex items-center justify-center bg-blue-600 text-white rounded">
@@ -199,7 +225,7 @@ export default function Home() {
             </CardContent>
           </Card>
 
-          <Card className="card-georgetown hover:bg-white/10 transition-colors">
+          <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors">
             <CardContent className="p-6">
               <div className="flex items-center gap-4 mb-4">
                 <ShoppingCartIcon className="h-8 w-8 text-[#63666A]" />
@@ -229,7 +255,7 @@ export default function Home() {
         <h2 className="text-3xl font-bold text-white mb-8 flex items-center">
           <GraduationCapIcon className="mr-2" /> Leadership and Activities
         </h2>
-        <Card className="card-georgetown">
+        <Card className="bg-white/5 border-white/10 backdrop-blur-sm">
           <CardContent className="p-6">
             <h3 className="text-xl font-semibold text-white">Head Coach (Volunteer)</h3>
             <p className="text-gray-300">Little Legends Basketball, Vienna, VA</p>
@@ -239,7 +265,7 @@ export default function Home() {
             </ul>
           </CardContent>
         </Card>
-        <Card className="card-georgetown mt-4">
+        <Card className="bg-white/5 border-white/10 backdrop-blur-sm mt-4">
           <CardContent className="p-6">
             <h3 className="text-xl font-semibold text-white">Audio Visual Specialist</h3>
             <p className="text-gray-300">McLean Bible Church</p>
@@ -263,7 +289,7 @@ export default function Home() {
           <BadgeCheckIcon className="mr-2" /> Skills
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <Card className="card-georgetown">
+          <Card className="bg-white/5 border-white/10 backdrop-blur-sm">
             <CardHeader>
               <CardTitle className="text-xl font-semibold text-white">Programming & Development</CardTitle>
             </CardHeader>
@@ -282,7 +308,7 @@ export default function Home() {
               </ul>
             </CardContent>
           </Card>
-          <Card className="card-georgetown">
+          <Card className="bg-white/5 border-white/10 backdrop-blur-sm">
             <CardHeader>
               <CardTitle className="text-xl font-semibold text-white">Design & User Experience</CardTitle>
             </CardHeader>
@@ -300,7 +326,7 @@ export default function Home() {
               </ul>
             </CardContent>
           </Card>
-          <Card className="card-georgetown">
+          <Card className="bg-white/5 border-white/10 backdrop-blur-sm">
             <CardHeader>
               <CardTitle className="text-xl font-semibold text-white">Data & Analytics</CardTitle>
             </CardHeader>
@@ -316,7 +342,7 @@ export default function Home() {
               </ul>
             </CardContent>
           </Card>
-          <Card className="card-georgetown card-georgetown-highlight">
+          <Card className="bg-white/5 border-white/10 backdrop-blur-sm border-l-4 border-l-[#041E42]">
             <CardHeader>
               <CardTitle className="text-xl font-semibold text-white">Artificial Intelligence</CardTitle>
             </CardHeader>
@@ -335,7 +361,7 @@ export default function Home() {
               </ul>
             </CardContent>
           </Card>
-          <Card className="card-georgetown">
+          <Card className="bg-white/5 border-white/10 backdrop-blur-sm">
             <CardHeader>
               <CardTitle className="text-xl font-semibold text-white">Business & Management</CardTitle>
             </CardHeader>
@@ -351,7 +377,7 @@ export default function Home() {
               </ul>
             </CardContent>
           </Card>
-          <Card className="card-georgetown">
+          <Card className="bg-white/5 border-white/10 backdrop-blur-sm">
             <CardHeader>
               <CardTitle className="text-xl font-semibold text-white">Software & Tools</CardTitle>
             </CardHeader>
@@ -366,7 +392,7 @@ export default function Home() {
               </ul>
             </CardContent>
           </Card>
-          <Card className="card-georgetown">
+          <Card className="bg-white/5 border-white/10 backdrop-blur-sm">
             <CardHeader>
               <CardTitle className="text-xl font-semibold text-white">Soft Skills</CardTitle>
             </CardHeader>
@@ -395,7 +421,7 @@ export default function Home() {
         <h2 className="text-3xl font-bold text-white mb-8 flex items-center">
           <HeartIcon className="mr-2" /> Interests
         </h2>
-        <Card className="card-georgetown">
+        <Card className="bg-white/5 border-white/10 backdrop-blur-sm">
           <CardContent className="p-6">
             <p className="text-gray-300">
               Technology including AI, UI/UX Design, Robotics, Team Sports (Basketball, Football, Lacrosse), Golf

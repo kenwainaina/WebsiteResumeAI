@@ -333,7 +333,7 @@ export default function Classes() {
     <div className="min-h-screen">
       <div className="max-w-6xl mx-auto px-4 py-12">
         <Link href="/" passHref>
-          <Button variant="outline" className="mb-8">
+          <Button variant="outline" className="mb-8 bg-transparent">
             <ArrowLeftIcon className="mr-2 h-4 w-4" /> Back to Home
           </Button>
         </Link>
@@ -358,7 +358,7 @@ export default function Classes() {
             <h2 className="text-3xl font-bold text-white mr-3">Master's Courses</h2>
             <div className="flex flex-wrap gap-2 mt-2 sm:mt-0">
               <Badge className="bg-[#041E42] text-white">Georgetown University</Badge>
-              <Badge className="bg-[#63666A] text-white">Starting Fall 2025</Badge>
+              <Badge className="bg-[#63666A] text-white">Started Summer 2025</Badge>
             </div>
           </div>
 
